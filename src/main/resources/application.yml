@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    username: jyjun
+    password: admin1234
+    url: jdbc:log4jdbc:mysql://localhost:3306/bacontree
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # option type: create, create-drop, update, validate, none
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect  # 쿼리의 기준이 되는 데이터베이스 엔진을 설정합니다.
+        show_sql: true  # sql 쿼리를 보여줍니다.
+        format_sql: true  # sql query formatting
+        use_sql_comments: true  # sql 쿼리의 추가정보를 보여줍니다.
+
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: false
+
+logging:
+  config: classpath:log4j2.xml
+
+server:
+  servlet:
+    encoding:
+      charset: UTF-8
+
+  port: 8080
