@@ -18,9 +18,11 @@ import java.util.Objects;
 @Getter
 @ToString(callSuper = true)
 public class User {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto increment
-    private Long no;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_no")
+    private Long userNo;
 
     @Setter
     @Column(nullable = false, unique = true)
@@ -95,11 +97,11 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return no.equals(user.no);
+        return userNo.equals(user.userNo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(no);
+        return Objects.hash(userNo);
     }
 }

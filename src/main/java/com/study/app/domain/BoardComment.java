@@ -6,22 +6,26 @@ import lombok.ToString;
 import org.hibernate.annotations.Comment;
 
 import javax.persistence.*;
+import java.util.Objects;
 
+@Table
 @Entity
 @Getter
 @ToString(callSuper = true)
-
 public class BoardComment extends AuditingFields {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long no;
+    private Long boardCommentNo;
 
     @Setter
     @ManyToOne(optional = false)
+    @JoinColumn(name="user_no")
     private User user;
 
     @Setter
     @ManyToOne(optional = false)
+    @JoinColumn(name = "board_no")
     private Board board;
 
     @Setter
@@ -35,24 +39,36 @@ public class BoardComment extends AuditingFields {
 
     @Column(nullable = false)
     @Comment("순서: 지정되는 번호값에 따라 정렬되는 순서")
-    private Integer order;;
+    private Integer orderComment;
 
     @Comment("댓글그룹: 몇번 게시글의 몇번째 댓글인지 설정")
     private Integer commentGroup;
 
     protected BoardComment() {}
 
-    private BoardComment(Long no, User user, Board board, String content, Integer floor, Integer order, Integer commentGroup) {
-        this.no = no;
+    private BoardComment( User user, Board board, String content, Integer floor, Integer orderComment, Integer commentGroup) {
         this.user = user;
         this.board = board;
         this.content = content;
         this.floor = floor;
-        this.order = order;
+        this.orderComment = orderComment;
         this.commentGroup = commentGroup;
     }
 
-    public static BoardComment of(Long no, User user, Board board, String content, Integer floor, Integer order, Integer commentGroup) {
-        return new BoardComment(no,user,board,content,floor,order,commentGroup);
+    public static BoardComment of(User user, Board board, String content, Integer floor, Integer orderComment, Integer commentGroup) {
+        return new BoardComment(user,board,content,floor,orderComment,commentGroup);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BoardComment that = (BoardComment) o;
+        return boardCommentNo.equals(that.boardCommentNo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(boardCommentNo);
     }
 }

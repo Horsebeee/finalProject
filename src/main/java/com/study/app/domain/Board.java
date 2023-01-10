@@ -10,15 +10,18 @@ import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Table
 @Entity
 @Getter
 @ToString(callSuper = true)
 public class Board extends AuditingFields {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long no;
+    private Long boardNo;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
+    @JoinColumn(name="user_no")
     private User user;
 
     @OneToMany(mappedBy = "board",cascade = CascadeType.ALL)
@@ -33,14 +36,13 @@ public class Board extends AuditingFields {
 
     protected Board() {}
 
-    private Board(Long no, User user, String content) {
-        this.no = no;
+    private Board(User user, String content) {
         this.user = user;
         this.content = content;
     }
 
-    public static Board of(Long no, User user, String content) {
-       return new Board(no,user,content);
+    public static Board of(User user, String content) {
+       return new Board(user,content);
     }
 
     @Override
@@ -48,11 +50,11 @@ public class Board extends AuditingFields {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Board board = (Board) o;
-        return no.equals(board.no);
+        return boardNo.equals(board.boardNo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(no);
+        return Objects.hash(boardNo);
     }
 }
