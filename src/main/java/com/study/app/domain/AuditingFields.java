@@ -13,6 +13,10 @@ import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
+/*
+*  테이블에 생성시 공통으로 들어가는 컬럼
+*  사용법 사용하는 도메인에 extends AuditingFields 추가
+* */
 @Getter
 @ToString
 @EntityListeners(AuditingEntityListener.class) // 이거 없으면 테스트 할때 createdAt 때문에 에러남
