@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Join</title>
+    <link href="css/join.css" rel="stylesheet">
+</head>
+<div class="join_container">
+    <header class="logo">
+        <div class="join_logo">
+            <b>BACONTREE</b>
+        </div>
+        <ul class="join_txt">
+            <li>친구들의 사진과 동영상을 보려면</li>
+            <li> 가입하세요.</li>
+        </ul>
+    </header>
+
+    <form action="" method="post" name="join"> <!--post :암호화방식-->
+        <input class="id" placeholder="아이디" type="text">
+        <input class="name" placeholder="성명" type="text">
+        <input class="nickname" placeholder="사용자 이름" type="text">
+        <input class="pw" placeholder="비밀번호" type="password">
+        <button class="joinBtn" onclick="joinClick()" type="button"><a href="#">가입</a></button>
+    </form>
+</div>
+<div class="account_login">
+    <ul>
+        <li>계정이 있으신가요?</li>
+        <li><a href="/login">로그인</a></li>
+    </ul>
+</div>
+<script src="js/join.js"></script>
+</body>
+</html>

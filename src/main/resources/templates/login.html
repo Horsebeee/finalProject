@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>login</title>
+<link rel = "stylesheet" href="/css/login.css">
+</head>
+<body>
+<div id = "container_wrap">
+    <div class="container">
+        <header>
+<!--            <img class = "brand_logo" src="img/brand_logo.png" alt="logo">-->
+            <div class="login_logo">
+                <b>BACONTREE</b>
+            </div>
+        </header>
+        <form name="login" action="" method="post"> <!--method="post" : 정보를 숨겨서 보낸다-->
+            <input class = "id" type="text" placeholder="전화번호,사용자 이름 또는 이메일"> <!--placeholder : 입력창 안에 text를 넣을 수 있다-->
+            <input class = "pwd" type="password" placeholder="비밀번호">
+            <button class = "loginBtn"><a href="#">로그인</a></button>
+        </form>
+        <div class="or_line">
+            <div class="line"></div>
+            <div class="text">또는</div>
+            <div class="line"></div>
+        </div>
+        <ul class="findpw">
+            <li><a href="findpwd.html">비밀번호를 잊으셨나요?</a></li>
+        </ul>
+    </div>
+    <div class ="account">
+        <ul>
+            <li>계정이 없으신가요?</li>
+            <li><a href="/join">가입하기</a></li>
+        </ul>
+    </div>
+</div>
+<script src="/js/login.js"></script>
+
+</body>
+</html>

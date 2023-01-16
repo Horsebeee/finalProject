@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    border-radius: 7px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+body {
+    background: #fafafa;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#container_wrap{
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.container{
+    background: #fff;
+    width: 350px;
+    height: 380px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 0.6rem;
+}
+
+.brand_logo{
+    display: block;  /*이미지는 인라인요소라 block요소로 바꿔야함(margin안먹힘)*/
+    width: 15rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+input{ /*<br>남발을 줄이기위해 사용했다*/
+    display: block;
+    width: 250px;
+    height: 40px;
+    margin: 0 auto;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    /*border-radius: 3px;*/
+    text-indent: 5px;
+    outline-color: #ccc;
+    font-size: 13px;
+}
+
+.loginBtn{ /*<br>남발을 줄이기위해 사용했다*/
+    display: block;
+    width: 250px;
+    height: 30px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 3px;
+    background: rgb(0, 149, 246);
+    font-weight: bold;
+    font-size: medium;
+    color: rgb(240,240,240);
+}
+.loginBtn a{
+    color: white;
+}
+input:first-child{/*같은 형태 요소 반복시 특정순서따라 속성을 다르게 지정*/
+    margin-bottom: 0.5rem;
+}
+input:nth-child(2){
+    margin-bottom: 1.5rem;
+}
+
+.or_line{
+    display: flex;/*가로로*/
+    align-items: center;
+    margin: 1rem auto 0;
+    justify-content: center;
+}
+.line{
+    border-bottom: 1px solid #828181;
+    width: 6.3rem;
+}
+.text{
+    margin: 0 10px;
+    font-weight: bold;
+    color: #828181;
+    font-size: 12px;
+
+}
+.findpw{
+    margin-top: 1rem;
+    font-size: small;
+    text-align: center;
+}
+.findpw a{
+    color: rgb(68, 68, 116);
+}
+
+
+.account{
+    background: #fff;
+    width: 350px;
+    height: 70px;
+    border: 1px solid #dbdbdb;
+}
+.account ul{
+    display:flex ;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+.account ul a{
+    font-weight: bold;
+    color: rgb(43, 152, 247);
+}
+
+.login_logo {
+    width: 180px;
+    height: 50px;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bolder;
+}
