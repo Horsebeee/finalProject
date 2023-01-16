@@ -35,24 +35,31 @@ public class User {
     private String pw;
 
     @Setter
-    @Column(nullable = false ,length = 11)
+    @Column(nullable = false, length = 20)
+    @Comment("닉네임: 실제 사이트에서 활동하는 이름")
+    private String nickname;
+
+    @Setter
+    @Column(nullable = false, length = 30)
+    @Comment("이름")
+    private String name;
+
+    @Setter
+    @Column(length = 11)
     @Comment("전화번호: - 없이 11자리 기준")
     private char phone;
 
     @Setter
-    @Column(nullable = false)
+    @Column
     @Comment("생년월일")
     private Date birth;
 
     @Setter
-    @Column(nullable = false)
+    @Column
     @Comment("성별: 0 여자, 1 남자")
     private Integer gender;
 
-    @Setter
-    @Column(nullable = false, length = 20)
-    @Comment("닉네임: 실제 사이트에서 활동하는 이름")
-    private String nickname;
+
 
     @Setter
     @Column(nullable = false)
