@@ -7,12 +7,13 @@ import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.Comment;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
 
 @Table(indexes = {
         @Index(columnList = "nickname"),
-        @Index(columnList = "id"),
+        @Index(columnList = "username"),
 })
 @Entity
 @Getter
@@ -27,12 +28,12 @@ public class User {
     @Setter
     @Column(nullable = false, unique = true)
     @Comment("아이디: 로그인 할 때 필요한 정보")
-    private String id;
+    private String username;
 
     @Setter
     @Column(nullable = false ,length = 2000)
     @Comment("비밀번호: 암호화 기준으로 length 설정")
-    private String pw;
+    private String password;
 
     @Setter
     @Column(nullable = false, length = 20)
@@ -47,7 +48,7 @@ public class User {
     @Setter
     @Column(length = 11)
     @Comment("전화번호: - 없이 11자리 기준")
-    private char phone;
+    private String phone;
 
     @Setter
     @Column
@@ -82,9 +83,9 @@ public class User {
 
     protected User() {}
 
-    private User(String id, String pw, char phone, Date birth, Integer gender, String nickname, Date reg_date, Date last_date, Integer status) {
-        this.id = id;
-        this.pw = pw;
+    private User(String username, String password, String phone, Date birth, Integer gender, String nickname, Date reg_date, Date last_date, Integer status) {
+        this.username = username;
+        this.password = password;
         this.phone = phone;
         this.birth = birth;
         this.gender = gender;
@@ -94,8 +95,8 @@ public class User {
         this.status = status;
     }
 
-    public static User of(String id, String pw, char phone, Date birth, Integer gender, String nickname, Date reg_date, Date last_date, Integer status){
-        return new User(id,pw,phone,birth,gender,nickname,reg_date,last_date,status);
+    public static User of(String username, String password, String phone, Date birth, Integer gender, String nickname, Date reg_date, Date last_date, Integer status){
+        return new User(username,password,phone,birth,gender,nickname,reg_date,last_date,status);
     }
 
 
