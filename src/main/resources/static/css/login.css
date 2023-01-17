@@ -1,25 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box ;
-    border-radius: 7px;
-}
-li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
+/**{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box ;*/
+/*    border-radius: 7px;*/
+/*}*/
+/*li{*/
+/*    list-style: none;*/
+/*}*/
+/*a{*/
+/*    text-decoration: none;*/
+/*}*/
 
-body {
-    background: #fafafa;
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/*body {*/
+/*    background: #fafafa;*/
+/*    width: 100%;*/
+/*    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+/*}*/
 #container_wrap{
     width: 350px;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: 7rem;
+
 }
 
 .container{
@@ -50,27 +51,30 @@ input{ /*<br>남발을 줄이기위해 사용했다*/
     font-size: 13px;
 }
 
-.loginBtn{ /*<br>남발을 줄이기위해 사용했다*/
+.loginBtn{
     display: block;
     width: 250px;
     height: 30px;
     margin: 0 auto;
     border: none;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
     background: rgb(0, 149, 246);
     font-weight: bold;
     font-size: medium;
     color: rgb(240,240,240);
+    cursor:pointer;
 }
-.loginBtn a{
-    color: white;
-}
-input:first-child{/*같은 형태 요소 반복시 특정순서따라 속성을 다르게 지정*/
+/*.loginBtn a{*/
+/*    display: block;*/
+/*    color: white;*/
+/*}*/
+form .id {
     margin-bottom: 0.5rem;
 }
-input:nth-child(2){
+form .pw {
     margin-bottom: 1.5rem;
 }
+
 
 .or_line{
     display: flex;/*가로로*/
@@ -122,4 +126,12 @@ input:nth-child(2){
     text-align: center;
     font-size: 28px;
     font-weight: bolder;
+}
+
+.msg {
+    height: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: red;
+    margin-bottom: 20px;;
 }
