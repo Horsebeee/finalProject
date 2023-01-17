@@ -1,4 +1,12 @@
 <?xml version="1.0"?>
 <thlogic>
     <attr sel="#header" th:replace="header :: #header" />
+    <attr sel=".test_class" th:remove="all-but-first">
+        <attr sel="div[0]" th:each="board : ${board}">
+            <attr sel="div.content" th:text="${board.content}"/>
+<!--            <attr sel="div.user-id" th:text="${board.user.nickname}"/>-->
+            <attr sel="div.created-at/time" th:datetime="${board.createdAt}" th:text="${#temporals.format(board.createdAt, 'yyyy-MM-dd')}"
+            />
+        </attr>
+    </attr>
 </thlogic>

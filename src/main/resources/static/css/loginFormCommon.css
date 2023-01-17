@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+    border-radius: 7px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background: #fafafa;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* TODO: 리펙토링 할 때 공통코드 모아서 재사용하기 */
