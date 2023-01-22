@@ -20,7 +20,8 @@
 .join_container{
     background: #fff;
     width: 350px;
-    height: 450px;
+
+    /*height: 450px;*/
     border: 1px solid #dbdbdb;
     margin-bottom: 0.6rem;
     margin: 0 auto;
@@ -60,7 +61,7 @@ input{
     display: block;/*세로박스 영역*/
     width: 250px;
     height: 40px;
-    margin: 0 auto 0.4rem;
+    margin: 0 auto 5px;
     background: #fafafa;
     border: 1px solid #dbdbdb;
     /*border-radius: 3px;*/
@@ -80,6 +81,7 @@ input{
     font-weight: bold;
     font-size: medium;
     color: white;
+    cursor:pointer;
 }
 button a{
     display: block;
@@ -88,14 +90,14 @@ button a{
 .account_login{
     background: #fff;
     width: 350px;
-    height: 70px;
+    /*height: 70px;*/
     border: 1px solid #dbdbdb;
     margin: 0.8rem auto;
 }
 .account_login ul{
     display:flex ;
     justify-content: center;
-    padding-top: 1.5rem;
+    padding: 1.5rem;
 }
 .account_login a{
     color: rgb(16, 168, 238);
@@ -112,4 +114,12 @@ button a{
 }
 .join_txt{
     margin: 20px auto;
+}
+.vaild {
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 11px;
+    color:red;
+    margin-bottom: 5px;
 }
