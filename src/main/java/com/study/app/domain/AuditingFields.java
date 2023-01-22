@@ -7,11 +7,11 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Column;
-import javax.persistence.EntityListeners;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /*
 *  테이블에 생성시 공통으로 들어가는 컬럼
@@ -25,17 +25,14 @@ public class AuditingFields {
     //메타데이터
     @CreatedDate
     @Column(nullable = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime createdAt; // 생성일자
-
-    @CreatedBy
-    @Column(nullable = false,length = 100)
-    private String createdBy; // 생성자
 
     @LastModifiedDate
     @Column(nullable = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime modifiedAt; // 수정일자
 
-    @LastModifiedBy
-    @Column(nullable = false,length = 100)
-    private String modifiedBy; // 수정자
+
+
 }

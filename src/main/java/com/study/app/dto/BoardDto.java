@@ -10,16 +10,15 @@ public record BoardDto(
         UserDto userDto,
         String content,
         LocalDateTime createdAt,
-        String createdBy,
-        LocalDateTime modifiedAt,
-        String modifiedBy
+        LocalDateTime modifiedAt
+
 ) {
     public static BoardDto of(UserDto userDto,String content){
-        return new BoardDto(null,userDto,content,null,null,null,null);
+        return new BoardDto(null,userDto,content,null,null);
     }
 
-    public static BoardDto of(Long boardNo, UserDto userDto, String content, LocalDateTime createdAt, String createdBy, LocalDateTime modifiedAt, String modifiedBy) {
-        return new BoardDto(boardNo, userDto, content, createdAt, createdBy, modifiedAt, modifiedBy);
+    public static BoardDto of(Long boardNo, UserDto userDto, String content, LocalDateTime createdAt, LocalDateTime modifiedAt) {
+        return new BoardDto(boardNo, userDto, content, createdAt, modifiedAt);
     }
     public static BoardDto from(Board entity) {
         return new BoardDto(
@@ -27,9 +26,7 @@ public record BoardDto(
                 UserDto.from(entity.getUser()),
                 entity.getContent(),
                 entity.getCreatedAt(),
-                entity.getCreatedBy(),
-                entity.getModifiedAt(),
-                entity.getModifiedBy()
+                entity.getModifiedAt()
         );
     }
     public Board toEntity(User user) {

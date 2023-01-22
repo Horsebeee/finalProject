@@ -17,7 +17,7 @@ public class UserLike {
 
     @Setter
     @ManyToOne
-    @JoinColumn(name = "user_no")
+    @JoinColumn(name = "username")
     private User user;
 
     @Setter

@@ -19,12 +19,24 @@
         </ul>
     </header>
 
-    <form action="" method="post" name="join"> <!--post :암호화방식-->
-        <input class="id" placeholder="아이디" type="text">
-        <input class="name" placeholder="성명" type="text">
-        <input class="nickname" placeholder="사용자 이름" type="text">
-        <input class="pw" placeholder="비밀번호" type="password">
-        <button class="joinBtn" onclick="joinClick()" type="button"><a href="#">가입</a></button>
+    <form id="form" name="form">
+        <input class="csrf" type="hidden">
+
+        <input class="name" placeholder="이름을 입력해주세요." type="text">
+        <div>
+            <input class="id" placeholder="아이디를 입력해주세요." type="text">
+            <span class="vaild" id="username">아이디</span>
+        </div>
+        <div>
+            <input class="pw" placeholder="비밀번호를 입력해주세요." type="password">
+            <span class="vaild" id="password">비밀번호</span>
+        </div>
+        <div>
+            <input class="nickname" placeholder="닉네임을 입력해주세요." type="text">
+            <span class="vaild" id="nickname">닉네임</span>
+        </div>
+
+        <button class="joinBtn" type="submit">가입</button>
     </form>
 </div>
 <div class="account_login">
@@ -33,6 +45,6 @@
         <li><a href="/login">로그인</a></li>
     </ul>
 </div>
-<script src="js/join.js"></script>
+<!--<script src="js/join.js"></script>-->
 </body>
 </html>

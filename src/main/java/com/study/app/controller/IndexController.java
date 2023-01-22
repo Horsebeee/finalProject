@@ -8,16 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class IndexController {
     @GetMapping("/")
-    public String index() {
-        return "index";
-    }
-    @GetMapping("/login")
-    public String login() {
-        return "login";
+    public String root() {
+//        return "redirect:/articles";
+        return "forward:/articles";
+
     }
 
-    @GetMapping("/join")
-    public String join() {
-        return "join";
-    }
+
 }

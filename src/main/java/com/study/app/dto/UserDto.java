@@ -2,24 +2,30 @@ package com.study.app.dto;
 
 import com.study.app.domain.User;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 public record UserDto(
-    String username,
-    String password,
-    String nickname,
-    String name,
-    String phone,
-    Date birth,
-    Integer gender,
-    Date reg_date,
-    Date last_date,
-    Integer status
+
+        String username,
+        String password,
+        String nickname,
+        String name,
+        String phone,
+        Date birth,
+        Integer gender,
+        LocalDateTime reg_date,
+        LocalDateTime last_date,
+        Integer status
 
 ) {
-    public static UserDto of(String username, String password, String nickname, String name, String phone, Date birth, Integer gender, Date reg_dateDate ,Date last_date, Integer status) {
-        return new UserDto( username, password, nickname, name, phone, birth, gender, reg_dateDate,last_date,status);
+    /* 암호화된 password */
+
+
+    public static UserDto of(String username, String password, String nickname, String name, String phone, Date birth, Integer gender, LocalDateTime reg_date ,LocalDateTime last_date, Integer status) {
+        return new UserDto( username, password, nickname, name, phone, birth, gender, reg_date,last_date,status);
     }
 
     // 회원정보 수정할 때
@@ -27,9 +33,11 @@ public record UserDto(
         return new UserDto( username, password, nickname, name, phone, birth, gender, null,null,null);
     }
     // 회원가입 할 때
-    public static UserDto of(String username, String password, String nickname, String name,String phone) {
-        return new UserDto( username, password, nickname, name, phone, null, null, null,null,null);
+    public static UserDto of(String username, String password, String nickname, String name) {
+        return new UserDto( username, password, nickname, name, null, null, null, null,null,null);
     }
+
+
 
     public static UserDto from(User entity) {
         return new UserDto(
@@ -46,8 +54,8 @@ public record UserDto(
         );
     }
 
-    public UserDto toUpdateEntity() {
-        return UserDto.of(
+    public User toUpdateEntity() {
+        return User.of(
                 username,
                 password,
                 nickname,
@@ -55,16 +63,9 @@ public record UserDto(
                 phone,
                 birth,
                 gender
+
         );
     }
 
-    public UserDto toCreateEntity() {
-        return UserDto.of(
-                username,
-                password,
-                nickname,
-                name,
-                phone
-        );
-    }
+
 }

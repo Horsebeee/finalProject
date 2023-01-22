@@ -1,3 +1,8 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .main_body {
     display: flex;
     justify-content: center;
@@ -53,6 +58,9 @@
     padding: 0px 10px;
     display: flex;
     flex-direction: column;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(142,142,142);
 }
 
 
@@ -122,6 +130,7 @@ span{
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
+    color: #813fdb;
 }
 
 .recommend_box {
@@ -140,4 +149,61 @@ span{
     color: lightgray;
     display: flex;
     flex-direction: column;
+}
+
+/*/////////////////////*/
+/*/////////////////////*/
+/*////////모달창////////*/
+.modal_overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999999999;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+.modal_window {
+    background: white;
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 800px;
+    height: 600px;
+    position: relative;
+    padding: 10px;
+}
+
+.modal_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.modal_title_side{
+    flex: 0 0 40px;
+    text-align: center;
+}
+
+.modal_image_upload{
+    outline: 2px dashed black ;
+    outline-offset:-10px;
+    text-align: center;
+    transition: all .15s ease-in-out;
+    width:780px;
+    height: 548px;
+}
+
+#add_feed, #close_modal {
+    cursor:pointer;
 }

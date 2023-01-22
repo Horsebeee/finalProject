@@ -1,12 +1,31 @@
 <?xml version="1.0"?>
 <thlogic>
+<!--  헤더  -->
     <attr sel="#header" th:replace="header :: #header" />
-    <attr sel=".test_class" th:remove="all-but-first">
-        <attr sel="div[0]" th:each="board : ${board}">
-            <attr sel="div.content" th:text="${board.content}"/>
-<!--            <attr sel="div.user-id" th:text="${board.user.nickname}"/>-->
-            <attr sel="div.created-at/time" th:datetime="${board.createdAt}" th:text="${#temporals.format(board.createdAt, 'yyyy-MM-dd')}"
-            />
+<!--  게시글  -->
+    <attr sel=".left_body" th:remove="all-but-first">
+        <attr sel=".feed_box[0]" th:each="board : ${board}">
+            <!--        <attr sel="div.feed_name/div.profile_box/img.profile_img" th:src="${img.path}"/> -->
+            <attr sel="div.feed_name/span.feed_name_txt" th:text="${board.userDto.username}"/>
+            <!--        <attr sel="img.feed_img" th:src="${img.path}"/>-->
+            <!--        <attr sel="div.feed_like/p.feed_txt" th:text="좋아요 ${user_like.count}"/>-->
+            <attr sel="div.feed_content/p.feed_txt/b" th:text="${board.userDto.username}"/>
+            <attr sel="div.feed_content/p.feed_txt/span" th:text="${board.content}"/>
+            <attr sel="div.feed_reply" th:text="|댓글 ${board.userDto.status}개 더보기|"/>
         </attr>
     </attr>
+<!--    <attr sel=".right_body/div.name_content/span.feed_content_txt" th:text="${principal.name}"/>-->
+    <attr sel=".right_body/div.feed_name/div/div.name_content/span.feed_name_txt" th:text="${principal.username}"/>
+    <attr sel=".right_body/div.feed_name/div/div.name_content/span.name_content_txt" th:text="${principal.name}"/>
+
+<!--    <div class="right_body">-->
+<!--    <div class="feed_name" style="justify-content: space-between">-->
+<!--    <div style="display: flex; align-items: center; ">-->
+<!--    <div class="name_content">-->
+<!--        <span class="feed_name_txt"> jin.99 </span>-->
+<!--        &lt;!&ndash;                       본인 닉네임&ndash;&gt;-->
+<!--        <span class="name_content_txt"> Jin Yongjun</span>-->
+<!--        &lt;!&ndash;                        본인 이름&ndash;&gt;-->
+<!--    </div>-->
+<!--    <attr sel="div.test_box/div.test" th:text="${principal.username}"/>-->
 </thlogic>

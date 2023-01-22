@@ -8,56 +8,30 @@
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" rel="stylesheet">
     <!--  폰트 css  -->
     <link href="/font/segoe-ui-4-cufonfonts-webfont/fontStyle.css" rel="stylesheet">
-    <!--  헤더 푸터 css  -->
-    <link href="/css/h_f.css" rel="stylesheet">
     <!--  index css  -->
     <link href="/css/index.css" rel="stylesheet">
-    <!--  로고 svg 파일 부분  -->
-    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
-        <symbol id="bootstrap" viewBox="0 0 118 94">
-            <title>Bootstrap</title>
-            <path clip-rule="evenodd"
-                  d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
-                  fill-rule="evenodd"></path>
-        </symbol>
-        <symbol id="home" viewBox="0 0 16 16">
-            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"></path>
-        </symbol>
-        <symbol id="speedometer2" viewBox="0 0 16 16">
-            <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"></path>
-            <path d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"
-                  fill-rule="evenodd"></path>
-        </symbol>
-        <symbol id="table" viewBox="0 0 16 16">
-            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"></path>
-        </symbol>
-        <symbol id="people-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
-            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-                  fill-rule="evenodd"></path>
-        </symbol>
-        <symbol id="grid" viewBox="0 0 16 16">
-            <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"></path>
-        </symbol>
-    </svg>
     <!--  구글 머티리얼 아이콘  -->
-    <link
-            href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-            rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
+
 <header id="header">
-    header
+    <header></header>
     <hr/>
 </header>
+
+
+
 <main>
     <div class="main_body">
         <div class="left_body">
             <div class="border feed_box">
                 <div class="feed_name">
                     <div class="profile_box">
-                        <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
+                        <img class="profile_img"
+                             src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
                     </div>
                     <span class="feed_name_txt"> jin.99 </span>
                 </div>
@@ -83,226 +57,21 @@
                 </div>
                 <div class="feed_content">
                     <p class="feed_txt">
-                        <b> jin.99 </b> 코로나라서 해외여행을 못가니 최근 제주도 가는사람이 늘고있습니다~ 제주도도 조심해야되는건 마찬가지~!
+                        <b> jin.99 </b>
+                        <span>코로나라서 해외여행을 못가니 최근 제주도 가는사람이 늘고있습니다~ 제주도도 조심해야되는건 마찬가지~!</span>
                     </p>
                 </div>
                 <div class="feed_reply">
-                    <span class="feed_txt">
-                        <b> mychew </b> 제주도 가고 싶어요 ㅠㅠ
-                    </span>
-                    <span class="feed_txt">
-                        <b> cho </b> 제주도  ㄱㄱ
-                    </span>
+                    댓글 123523453개 더보기
                 </div>
-            </div><div class="border feed_box">
-                <div class="feed_name">
-                    <div class="profile_box">
-                        <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-<!--                        프로필 사진 들어가는 곳-->
-                    </div>
-                    <span class="feed_name_txt"> jin.99 </span>
-<!--                    본인 닉네임-->
-                </div>
-                <img class="feed_img "
-                     src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-<!--            피드 이미지 들어가는 곳-->
-                <div class="feed_icon">
-                    <div>
-                        <span class="material-icons-outlined">
-                            favorite_border
-<!--                            좋아요 아이콘-->
-                        </span>
-                        <span class="material-icons-outlined">
-                            mode_comment
-<!--                            댓글등록 아이콘-->
-                        </span>
-                    </div>
-                    <div>
-                        <span class="material-icons-outlined">
-                            turned_in_not
-<!--                            즐겨찾기 아이콘-->
-                        </span>
-                    </div>
-                </div>
-                <div class="feed_like">
-                    <p class="feed_txt"><b>좋아요 10개</b></p>
-<!--                    좋아요 갯수 알려주는 곳-->
-                </div>
-                <div class="feed_content">
-                    <p class="feed_txt">
-                        <b> jin.99 </b> 코로나라서 해외여행을 못가니 최근 제주도 가는사람이 늘고있습니다~ 제주도도 조심해야되는건 마찬가지~!
-<!--                        본인 닉네임, 피드 내용 3줄 이상이면 더보기 버튼 보이게 하기 클릭시 모달창으로 피드 사진, 내용 , 댓글 보여줌-->
-                    </p>
-                </div>
-                <div class="feed_reply">
-                    <span class="feed_txt">
-                        <b> mychew </b> 제주도 가고 싶어요 ㅠㅠ
-<!--                        댓글작성자, 댓글내용, 이부분 댓글 더보기로 처리할 예정 더보기 클릭시 위와 같음-->
-                    </span>
-                    <span class="feed_txt">
-                        <b> cho </b> 제주도  ㄱㄱ
-                    </span>
-                </div>
-            </div><div class="border feed_box">
-                <div class="feed_name">
-                    <div class="profile_box">
-                        <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-                    </div>
-                    <span class="feed_name_txt"> jin.99 </span>
-                </div>
-                <img class="feed_img "
-                     src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-                <div class="feed_icon">
-                    <div>
-                        <span class="material-icons-outlined">
-                            favorite_border
-                        </span>
-                        <span class="material-icons-outlined">
-                            mode_comment
-                        </span>
-                    </div>
-                    <div>
-                        <span class="material-icons-outlined">
-                            turned_in_not
-                        </span>
-                    </div>
-                </div>
-                <div class="feed_like">
-                    <p class="feed_txt"><b>좋아요 10개</b></p>
-                </div>
-                <div class="feed_content">
-                    <p class="feed_txt">
-                        <b> jin.99 </b> 코로나라서 해외여행을 못가니 최근 제주도 가는사람이 늘고있습니다~ 제주도도 조심해야되는건 마찬가지~!
-                    </p>
-                </div>
-                <div class="feed_reply">
-                    <span class="feed_txt">
-                        <b> mychew </b> 제주도 가고 싶어요 ㅠㅠ
-                    </span>
-                    <span class="feed_txt">
-                        <b> cho </b> 제주도  ㄱㄱ
-                    </span>
-                </div>
-            </div><div class="border feed_box">
-                <div class="feed_name">
-                    <div class="profile_box">
-                        <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-                    </div>
-                    <span class="feed_name_txt"> jin.99 </span>
-                </div>
-                <img class="feed_img "
-                     src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-                <div class="feed_icon">
-                    <div>
-                        <span class="material-icons-outlined">
-                            favorite_border
-                        </span>
-                        <span class="material-icons-outlined">
-                            mode_comment
-                        </span>
-                    </div>
-                    <div>
-                        <span class="material-icons-outlined">
-                            turned_in_not
-                        </span>
-                    </div>
-                </div>
-                <div class="feed_like">
-                    <p class="feed_txt"><b>좋아요 10개</b></p>
-                </div>
-                <div class="feed_content">
-                    <p class="feed_txt">
-                        <b> jin.99 </b> 코로나라서 해외여행을 못가니 최근 제주도 가는사람이 늘고있습니다~ 제주도도 조심해야되는건 마찬가지~!
-                    </p>
-                </div>
-                <div class="feed_reply">
-                    <span class="feed_txt">
-                        <b> mychew </b> 제주도 가고 싶어요 ㅠㅠ
-                    </span>
-                    <span class="feed_txt">
-                        <b> cho </b> 제주도  ㄱㄱ
-                    </span>
-                </div>
-            </div><div class="border feed_box">
-                <div class="feed_name">
-                    <div class="profile_box">
-                        <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-                    </div>
-                    <span class="feed_name_txt"> jin.99 </span>
-                </div>
-                <img class="feed_img "
-                     src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-                <div class="feed_icon">
-                    <div>
-                        <span class="material-icons-outlined">
-                            favorite_border
-                        </span>
-                        <span class="material-icons-outlined">
-                            mode_comment
-                        </span>
-                    </div>
-                    <div>
-                        <span class="material-icons-outlined">
-                            turned_in_not
-                        </span>
-                    </div>
-                </div>
-                <div class="feed_like">
-                    <p class="feed_txt"><b>좋아요 10개</b></p>
-                </div>
-                <div class="feed_content">
-                    <p class="feed_txt">
-                        <b> jin.99 </b> 코로나라서 해외여행을 못가니 최근 제주도 가는사람이 늘고있습니다~ 제주도도 조심해야되는건 마찬가지~!
-                    </p>
-                </div>
-                <div class="feed_reply">
-                    <span class="feed_txt">
-                        <b> mychew </b> 제주도 가고 싶어요 ㅠㅠ
-                    </span>
-                    <span class="feed_txt">
-                        <b> cho </b> 제주도  ㄱㄱ
-                    </span>
-                </div>
-            </div><div class="border feed_box">
-                <div class="feed_name">
-                    <div class="profile_box">
-                        <img class="profile_img" src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-                    </div>
-                    <span class="feed_name_txt"> jin.99 </span>
-                </div>
-                <img class="feed_img "
-                     src="https://mblogthumb-phinf.pstatic.net/MjAxNzA2MTFfMjc1/MDAxNDk3MTcyMDgyNzEw.ID5RyHWKvsVEW2NS9EQGyRYX7vUaXr7znQeuTrRRmdIg.gK7MD7VhNJPkV4_dueiWer2y-oH7NAAmEklF-6bbYyQg.JPEG.jejubyeol/%EC%97%AC%EB%A6%84%EC%97%90_%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%82%AC%EC%A7%84%EC%B0%8D%EA%B8%B0_%EC%A2%8B%EC%9D%80%EA%B3%B3.jpg?type=w800">
-                <div class="feed_icon">
-                    <div>
-                        <span class="material-icons-outlined">
-                            favorite_border
-                        </span>
-                        <span class="material-icons-outlined">
-                            mode_comment
-                        </span>
-                    </div>
-                    <div>
-                        <span class="material-icons-outlined">
-                            turned_in_not
-                        </span>
-                    </div>
-                </div>
-                <div class="feed_like">
-                    <p class="feed_txt"><b>좋아요 10개</b></p>
-                </div>
-                <div class="feed_content">
-                    <p class="feed_txt">
-                        <b> jin.99 </b> 코로나라서 해외여행을 못가니 최근 제주도 가는사람이 늘고있습니다~ 제주도도 조심해야되는건 마찬가지~!
-                    </p>
-                </div>
-                <div class="feed_reply">
-                    <span class="feed_txt">
-                        <b> mychew </b> 제주도 가고 싶어요 ㅠㅠ
-                    </span>
-                    <span class="feed_txt">
-                        <b> cho </b> 제주도  ㄱㄱ
-                    </span>
-                </div>
+                <!--                <div class="feed_reply">-->
+                <!--                    <span class="feed_txt">-->
+                <!--                        <b> mychew </b> 제주도 가고 싶어요 ㅠㅠ-->
+                <!--                    </span>-->
+                <!--                    <span class="feed_txt">-->
+                <!--                        <b> cho </b> 제주도  ㄱㄱ-->
+                <!--                    </span>-->
+                <!--                </div>-->
             </div>
         </div>
         <div class="right_body">
@@ -314,23 +83,23 @@
                     </div>
                     <div class="name_content">
                         <span class="feed_name_txt"> jin.99 </span>
-<!--                       본인 닉네임-->
+                        <!--                       본인 닉네임-->
                         <span class="name_content_txt"> Jin Yongjun</span>
-<!--                        본인 이름-->
+                        <!--                        본인 이름-->
                     </div>
                 </div>
 
-                <a class="link_txt" >
+                <a class="link_txt">
                     전환
                 </a>
-<!--                다른 계정으로 아이디 비번 입력하면 지금계정 로그아웃하고 다른계정으로 로그인 후 리다이렉트-->
+                <!--                다른 계정으로 아이디 비번 입력하면 지금계정 로그아웃하고 다른계정으로 로그인 후 리다이렉트-->
             </div>
 
             <div class="recommend_box">
                 <span style="color: gray"> 회원님을 위한 추천</span>
-<!--                추천 리스트 중에서 겹치지 않게 추천하기-->
+                <!--                추천 리스트 중에서 겹치지 않게 추천하기-->
                 <span style="font-size: 12px"> 모두 보기 </span>
-<!--                모두 보기 클릭시 나를 위한 추천리스트 보여주기-->
+                <!--                모두 보기 클릭시 나를 위한 추천리스트 보여주기-->
             </div>
             <div>
                 <div class="feed_name" style="justify-content: space-between">
@@ -345,7 +114,7 @@
                     <a class="link_txt">
                         팔로우
                     </a>
-<!--                    팔로우 클릭시 디비에 내가 팔로우한 닉네임이 추가됨-->
+                    <!--                    팔로우 클릭시 디비에 내가 팔로우한 닉네임이 추가됨-->
                 </div>
                 <div class="feed_name" style="justify-content: space-between">
                     <div class="profile_box">
@@ -404,24 +173,24 @@
             </div>
             <div class="comment_box">
                 <span> 인스타그램 클론 코딩 </span>
-                <span> https://github.com/Horsebeee/finalProject </span>
+                <span><a
+                        href="https://github.com/Horsebeee/finalProject"> https://github.com/Horsebeee/finalProject </a></span>
                 <br>
                 <span> @2022 BaconTree </span>
 
             </div>
         </div>
     </div>
-    <div class="test_class">
-        <div>
-            <div class="content">내용</div>
-            <div class="user-id">작성자</div>
-            <div class="created-at"><time>작성일</time></div>
-        </div>
-    </div>
+<!--    <div class="test_box">-->
+<!--        <div class="test">-->
+<!--            안녕하세요-->
+<!--        </div>-->
+<!--    </div>-->
 </main>
 
 <script crossorigin="anonymous"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+</script>
 </body>
 </html>
