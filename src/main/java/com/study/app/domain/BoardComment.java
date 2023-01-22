@@ -20,7 +20,7 @@ public class BoardComment extends AuditingFields {
 
     @Setter
     @ManyToOne(optional = false)
-    @JoinColumn(name="user_no")
+    @JoinColumn(name="username")
     private User user;
 
     @Setter

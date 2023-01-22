@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<thlogic>
+<!--<attr sel="#msg" th:if="${not empty param.msg}" th:text="${param.msg}"/>-->
+    <attr sel="form" th:action="@{/login_proc}" >
+        <attr sel="input.csrf" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    </attr>
+</thlogic>

@@ -21,7 +21,7 @@ public class Board extends AuditingFields {
     private Long boardNo;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name="user_no")
+    @JoinColumn(name="username")
     private User user;
 
     @OneToMany(mappedBy = "board",cascade = CascadeType.ALL)
