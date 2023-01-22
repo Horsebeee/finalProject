@@ -46,6 +46,9 @@ dependencies {
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5' // 타임리프 + 스프링 시큐리티 같이 쓰려면 꼭 필요함
     testImplementation 'org.springframework.security:spring-security-test'
 
+    // validation 추가
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 }
 
 tasks.named('test') {
